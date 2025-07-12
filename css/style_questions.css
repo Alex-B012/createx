@@ -1,0 +1,133 @@
+/* ================= QUESTIONS ================= */
+.questions__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.questions__img img {
+    max-width: 400px;
+    height: 100%;
+    transform: scaleX(-1);
+}
+
+.questions__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--content-margin-right);
+}
+
+.questions__heading {
+    margin-bottom: 40px;
+}
+
+.questions__form-row {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.questions__form-label {
+    display: block;
+    padding: 12px 0;
+    margin-right: 40px;
+    width: 100%;
+}
+
+.questions__form-label:last-child {
+    margin-right: 0px;
+}
+
+.questions__form-input,
+.questions__form-text {
+    display: block;
+    border: 1px solid var(--color-gray-btn);
+    border-radius: 4px;
+    padding: 13px 16px;
+    margin-top: 8px;
+    width: calc(100% - 34px);
+
+}
+
+.questions__form-text {
+    resize: none;
+    height: 128px;
+    font-family: Arial, sans-serif;
+    font-size: 13.3333px
+}
+
+.questions__form-input::placeholder,
+.questions__form-text::placeholder {
+    color: var(--color-placeholder);
+}
+
+.questions__text-label {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.questions__checkbox-label {
+    display: flex;
+    margin-right: 50px;
+    width: 100%;
+}
+
+.questions__form-checkbox {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    margin: 0 12px 0 0;
+}
+
+.questions__form-default {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+
+.questions__form-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--color-grey);
+    border-radius: 3px;
+    transition: all 1.5s;
+    padding: 2px;
+}
+
+.questions__form-custom:hover {
+    cursor: pointer;
+    border: 1px solid var(--color-red-main);
+    transition: all 0.75s;
+}
+
+.questions__form-default:checked+.questions__form-custom {
+    background: url("../icons/check-svgrepo-com.svg") 50% 50% no-repeat, var(--color-red-main);
+}
+
+.questions__form-custom img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    border: none;
+    padding: 0 1px 1px 0;
+}
+
+.questions__form-btn {
+    width: 100%;
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}

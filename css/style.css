@@ -1,0 +1,209 @@
+:root {
+    --container-width: 1230px;
+    --gap: 15px;
+    --content-margin-right: 30px;
+    --max-height-cert__image-box-img: 427px;
+    --max-width-team__slide: 265px;
+    --color-grey: #424551;
+    --color-img-grey: #cfcfcf;
+    --color-black-sp: #1e212c;
+    --color-red-main: #ff3f3a;
+    --color-red-main-opacity012: rgb(255, 63, 58, 0.12);
+    --color-red-main-opacity02: rgb(255, 63, 58, 0.2);
+    --color-red-main-dark: rgb(180, 6, 0);
+    --color-orange: #f75e05;
+    --color-orange-opacity02: rgb(247, 94, 5, 0.2);
+
+    --color-gray-btn: #9a9ca5;
+    --color-section-bg: #e7f6ff;
+    /* --color-section-bg: #d8d8d8; */
+    /* --color-section-bg: #f4f5f7; */
+
+    --color-directions-text-grey: #787a80;
+    --color-direction-list-empty: #e9e9e9;
+    --color-marketing-link-tag: #03CEA4;
+    --color-management-link-tag: #5a87fc;
+    --color-hr-link-tag: #f89828;
+    --color-design-link-tag: #f25f6e;
+    --color-development-link-tag: #5e5cb3;
+    --color-border-form-element: #d7dadd;
+    --color-placeholder: #9a9ca5;
+    --bg-color-footer-bottom: #292c37;
+}
+
+html, body {
+    font-family: sans-serif;
+    color: var(--color-grey)
+}
+
+img {
+    border: 1px solid var(--color-img-grey);
+    border-radius: 3px;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--gap) + var(--gap));
+    padding: 0 var(--gap);
+    margin: 0 auto;
+    height: 100%;
+}
+
+.main__about {
+    padding: 30px 0 80px;
+    background-color: var(--color-section-bg);
+}
+
+.main__directions {
+    padding: 80px 0;
+}
+
+.main__cert {
+    padding: 80px 0 0;
+    margin-bottom: -46px;
+    background-color: var(--color-section-bg);
+}
+
+.main__team {
+    padding: 180px 0 60px;
+}
+
+.main__testimonials {
+    padding: 80px 0;
+    background-color: var(--color-section-bg);
+}
+
+.main__companies {
+    padding: 80px 0;
+}
+
+.main__program {
+    padding: 80px 0;
+    background-color: var(--color-section-bg);
+}
+
+.main__blog {
+    padding: 80px 0;
+}
+
+.main__info {
+    padding: 80px 0;
+    background-color: var(--color-section-bg);
+}
+
+.main_questions {
+    padding: 80px 0;
+}
+
+.button {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 52px;
+    padding: 0 40px;
+    margin-right: 5px;
+    color: #fff !important;
+    border-radius: 4px;
+    background: linear-gradient(55.95deg, var(--color-red-main) 0%, var(--color-orange) 100%);
+    white-space: nowrap;
+    transition: all 0.5s;
+}
+
+.button a {
+    color: #fff;
+}
+
+.button-empty {
+    background-image: none;
+    border-left: 2px solid var(--color-red-main);
+    border-right: 2px solid var(--color-orange);
+    background-image: -webkit-linear-gradient(55.95deg, var(--color-red-main), var(--color-orange)), -webkit-linear-gradient(55.95deg, var(--color-red-main), var(--color-orange));
+    background-image: linear-gradient(55.95deg, var(--color-red-main), var(--color-orange)), linear-gradient(55.95deg, var(--color-red-main), var(--color-orange));
+    background-size: 100% 2px;
+    background-position: 0 100%, 0 0;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+.button-empty span {
+    background: linear-gradient(55.95deg, var(--color-red-main), var(--color-orange));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--color-red-main);
+}
+
+.heading {
+    color: var(--color-black-sp)
+}
+
+.heading--text-center {
+    text-align: center;
+}
+
+.heading__subtitle {
+    line-height: 150%;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.heading__title {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 130%;
+}
+
+.button:hover {
+    transform: scale(1.03);
+}
+
+a {
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--color-grey)
+}
+
+a:visited {
+    color: var(--color-grey)
+}
+
+/* ========================= SLIDER ==============================*/
+
+.global__slider-arrow svg {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 14px;
+    transition: all .75s;
+}
+
+.global__slider-arrow svg:hover {
+    scale: 1.1;
+    background-color: var(--color-red-main);
+}
+
+.global__slider-arrow path {
+    fill: var(--color-grey);
+    transition: all .5s;
+}
+
+.global__slider-arrow:hover path {
+    fill: white;
+}
+
+.global__slider-prev {
+    margin-right: 10px;
+}
+
+.global__slider-prev svg {
+    transform: scaleX(-1);
+}
+
+/* =========================================================*/

@@ -1,0 +1,156 @@
+.directions__heading {
+    margin-bottom: 90px;
+}
+
+.directions__filter-box {
+    display: flex;
+    margin-bottom: 56px;
+}
+
+.directions__filter-item {
+    margin-right: 45px;
+}
+
+.directions__filter-item:last-child {
+    margin-right: 0;
+}
+
+.directions__filter-btn {
+    background-color: transparent;
+    color: var(--color-gray-btn);
+    border: 1px solid var(--color-gray-btn);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 5px 7px;
+}
+
+.directions__filter-btn:hover {
+    cursor: pointer;
+    scale: 1.02;
+}
+
+.directions__filter-btn--active {
+    background: linear-gradient(55.95deg, var(--color-red-main) 0%, var(--color-orange) 100%);
+    color: white
+}
+
+.directions__list {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(3, auto);
+    gap: 30px;
+}
+
+.directions__list-item {
+    max-width: 390px;
+    margin-bottom: 30px;
+
+}
+
+.directions__list-link {
+    display: block;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 1.5s;
+
+}
+
+.directions__list-link:hover {
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.25),
+        0px 30px 24px -10px rgba(154, 156, 165, 0.2),
+        0px 12px 18px -6px rgba(154, 156, 165, 0.15),
+        0px 4px 4px -4px rgba(30, 33, 44, 0.1);
+    transition: all 0.5s;
+}
+
+.directions__list-link:hover .directions__link-btn {
+    color: var(--color-red-main-dark);
+}
+
+.directions__image-box img {
+    width: 100%;
+    height: 100%;
+}
+
+.directions__link-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 24px 0px;
+    border: 1px solid #e5e8ed;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+    margin-top: -5px;
+}
+
+.directions__link-tag {
+    line-height: 1;
+    font-weight: 700;
+    color: white;
+    background-color: #999;
+    padding: 6px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.directions__link-text {
+    white-space: normal;
+    color: var(--color-directions-text-grey);
+    height: 70px;
+}
+
+.directions__link-btn {
+    color: var(--color-black-sp);
+    display: flex;
+    margin-top: 10px;
+    font-weight: 700;
+    width: 140px;
+    transition: all 1.5s;
+}
+
+.directions__link-btn::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 24px;
+    background: url(../icons/arrow_1_red.svg) 0 4px/ 100% no-repeat;
+    margin-left: 11px;
+}
+
+.directions__list-item--empty {
+    background: var(--color-direction-list-empty);
+    font-weight: 700;
+    font-style: 20px;
+    line-height: 150%;
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.directions__list-item--empty span {
+    max-width: 200px;
+}
+
+.directions__list-item--marketing .directions__link-tag {
+    background-color: var(--color-marketing-link-tag);
+}
+
+.directions__list-item--management .directions__link-tag {
+    background-color: var(--color-management-link-tag);
+}
+
+.directions__list-item--hr .directions__link-tag {
+    background-color: var(--color-hr-link-tag);
+}
+
+.directions__list-item--design .directions__link-tag {
+    background-color: var(--color-design-link-tag);
+}
+
+.directions__list-item--development .directions__link-tag {
+    background-color: var(--color-development-link-tag);
+}
