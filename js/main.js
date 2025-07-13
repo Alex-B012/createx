@@ -76,4 +76,34 @@ $(document).ready(function () {
       return false;
     }
   );
+
+  setInterval(() => {
+    if (
+      window.pageYOffset > 0 &&
+      $(".header__top").hasClass("header__top--open") === false
+    ) {
+      $(".burger").addClass("burger--follow");
+    } else {
+      $(".burger").removeClass("burger--follow");
+    }
+  }, 150);
+
+  $(".burger, .overlay").on("click", function (e) {
+    e.preventDefault();
+    $(".header__top").toggleClass("header__top--open");
+    $(".burger__wrapper").toggleClass("burger--open");
+  });
+
+  setInterval(() => {
+    if (
+      $(window).width() > 1100 ||
+      $(".header__top").hasClass("header__top--open") === false
+    ) {
+      $(".overlay").removeClass("overlay--show");
+    } else {
+      $(".overlay").addClass("overlay--show");
+    }
+  }, 150);
 });
+
+// 17:40:40
