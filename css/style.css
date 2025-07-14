@@ -1,7 +1,7 @@
 :root {
     --container-width: 1230px;
     --gap: 15px;
-    --gap450: 1%;
+    --gap450: 2%;
     --content-margin-right: 30px;
     --max-height-cert__image-box-img: 427px;
     --max-width-team__slide: 265px;
@@ -82,7 +82,8 @@ img {
     background-color: var(--color-section-bg);
 }
 
-.main__directions {
+.main__directions, .main__companies,
+.main__blog, .main_questions {
     padding: 80px 0;
 }
 
@@ -96,31 +97,13 @@ img {
     padding: 180px 0 60px;
 }
 
-.main__testimonials {
+.main__testimonials, .main__program, .main__info {
     padding: 80px 0;
     background-color: var(--color-section-bg);
 }
 
-.main__companies {
-    padding: 80px 0;
-}
-
-.main__program {
-    padding: 80px 0;
-    background-color: var(--color-section-bg);
-}
-
-.main__blog {
-    padding: 80px 0;
-}
-
-.main__info {
-    padding: 80px 0;
-    background-color: var(--color-section-bg);
-}
-
-.main_questions {
-    padding: 80px 0;
+#students_img_2 {
+    display: none;
 }
 
 .button {
@@ -505,7 +488,7 @@ a:visited {
 .about__values {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .about__image-box {
@@ -520,7 +503,8 @@ a:visited {
 
 .about__numbers {
     margin-left: var(--content-margin-right);
-    align-self: center;
+    align-self: flex-start;
+    white-space: nowrap;
 }
 
 .about__number {
@@ -734,6 +718,11 @@ a:visited {
         display: none;
     }
 
+
+    .about__createx {
+        margin-bottom: 90px;
+    }
+
     .about__createx-content {
         max-width: 100%;
     }
@@ -757,8 +746,18 @@ a:visited {
     .about__btn {
         margin: 0 10px 0;
     }
-}
 
+    #laptop_img_id {
+        display: none;
+    }
+
+    #students_img_2 {
+        display: block;
+        max-width: 427px !important;
+        object-fit: cover;
+        margin: 0 0;
+    }
+}
 
 @media (max-width: 900px) and (min-height: 500px) {
     .header {
@@ -766,17 +765,63 @@ a:visited {
     }
 }
 
+/* ============================ 700 ===============================*/
+@media (max-width: 700px) {
+    .about__values {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about__numbers {
+        align-self: center;
+        margin-top: 30px;
+    }
+}
+
+
 /* ============================ 550 ===============================*/
 
 @media (max-width: 550px) {
+
+    .main__about {
+        padding: 30px 0 40px;
+
+    }
+
+    .main__cert {
+        padding: 40px 0 0;
+    }
+
+    .main__team {
+        padding: 180px 0 30px;
+    }
+
+    .main__directions, .main__testimonials, .main__companies,
+    .main__program, .main__blog,
+    .main__info, .main_questions {
+        padding: 40px 0;
+    }
+
     .header__title {
         max-width: none;
         font-size: 35px;
 
     }
 
+    .heading {
+        margin-bottom: 20px;
+    }
+
     .heading__title {
         font-size: 30px;
+    }
+
+    .heading__subtitle {
+        font-size: 18px;
+    }
+
+    .about__text {
+        border-top: -40px;
     }
 
     .about__image-box {
@@ -797,6 +842,10 @@ a:visited {
     .about__paragraph {
         font-size: inherit;
     }
+
+    .about__createx {
+        margin-bottom: 40px;
+    }
 }
 
 /* ============================ 450 ===============================*/
@@ -810,13 +859,23 @@ a:visited {
 
     .container {
         padding: 0 var(--gap450);
+        padding: 0;
     }
 
 
     /* ------------------------------- */
+
+    .header__play {
+        padding: 0 var(--gap450);
+    }
+
     .header__title {
         max-width: none;
         font-size: 35px;
+    }
+
+    .heading {
+        padding: 0 var(--gap450);
     }
 
     .heading__title {
@@ -832,8 +891,19 @@ a:visited {
         margin: 0 0 20px;
     }
 
+    .about__text {
+        padding: 0 var(--gap450);
+    }
 
+    .about__number span {
+        font-size: 30px;
+    }
 
+    #students_img_2 {
+        max-width: 100% !important;
+        border: none;
+        border-radius: 0;
+    }
 }
 
 /* ============================ 400 ===============================*/
