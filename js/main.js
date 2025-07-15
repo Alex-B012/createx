@@ -12,6 +12,11 @@ $(document).ready(function () {
     slidesToShow: 4,
     draggable: false,
     waitForAnimate: true,
+    responsive: [
+      { breakpoint: 700, settings: { slidesToShow: 3 } },
+      { breakpoint: 500, settings: { slidesToShow: 2 } },
+      { breakpoint: 400, settings: { slidesToShow: 1, draggable: true } },
+    ],
   });
 
   $(".team__slider-prev").on("click", function (e) {
@@ -106,4 +111,4 @@ $(document).ready(function () {
   }, 150);
 });
 
-// 17:40:40
+// 18:46:29
