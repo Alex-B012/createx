@@ -1043,7 +1043,6 @@ a:visited {
     margin: -5% 0 0 10px;
 }
 
-
 .testimonials__slider .slick-dots {
     display: flex;
     justify-content: center;
@@ -1089,7 +1088,8 @@ a:visited {
 .companies__grid {
     display: grid;
     grid-template: repeat(2, auto) / repeat(6, 1fr);
-    gap: 40px 100px;
+    gap: 40px 35px;
+    place-items: center
 }
 
 .companies__grid-link {
@@ -1115,6 +1115,78 @@ a:visited {
     max-height: 64px;
     border: none;
 }
+
+/* ================================================================ */
+/* ========================== PROGRAM ============================= */
+.program_inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.program__content {
+    max-width: 600px;
+    margin-right: 30px;
+}
+
+.companies__heading {
+    margin-bottom: 60px;
+}
+
+.program__acc-item {
+    min-height: fit-content;
+    margin-bottom: 24px;
+}
+
+.program__acc-item:last-child {
+    margin-bottom: 0;
+}
+
+.program__acc-link {
+    display: block;
+    padding-left: 40px;
+    white-space: normal;
+}
+
+.program__acc-head {
+    position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-black-sp);
+}
+
+.program__acc-head::before,
+.program__acc-head::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    width: 18px;
+    height: 2px;
+    background-color: var(--color-red-main);
+    border-radius: 2px;
+}
+
+.program__acc-head::after {
+    transform: rotate(90deg);
+    transition: all 0.75s;
+}
+
+.program__acc-link--active .program__acc-head::after {
+    transform: rotate(0deg);
+}
+
+.program__acc-head span {
+    font-weight: 400;
+    color: var(--color-red-main);
+}
+
+.program__acc-text {
+    display: none;
+    margin-top: 16px;
+}
+
+
 
 
 /* ================================================================ */
@@ -1434,6 +1506,11 @@ a:visited {
         height: 18px;
         padding: 12.5px;
     }
+
+    /* ---------------------------------------------------- */
+    .companies__grid {
+        grid-template: repeat(3, auto) / repeat(4, 1fr);
+    }
 }
 
 @media (max-width: 900px) and (min-height: 500px) {
@@ -1465,13 +1542,25 @@ a:visited {
         min-width: 217px;
         margin-bottom: 10px;
     }
+
+    /* ---------------------------------------------------- */
+    .companies__grid-link {
+        width: 72px;
+        height: 48px;
+    }
 }
 
+/* ============================ 600 ===============================*/
+
+@media (max-width: 600px) {
+    .companies__grid {
+        grid-template: repeat(4, auto) / repeat(3, 1fr);
+    }
+}
 
 /* ============================ 550 ===============================*/
 
 @media (max-width: 550px) {
-
     .main__about {
         padding: 30px 0 40px;
     }
@@ -1506,7 +1595,6 @@ a:visited {
     .header__title {
         max-width: none;
         font-size: 35px;
-
     }
 
     /* ---------------------------------------------------- */
@@ -1554,7 +1642,6 @@ a:visited {
 }
 
 /* ============================ 450 ===============================*/
-
 
 @media (max-width: 450px) {
     .header__top {
@@ -1639,7 +1726,6 @@ a:visited {
     .testimonials__slider-wrapper {
         margin: 0 15px;
         max-width: calc(100% - 30px);
-
     }
 
     .testimonials__slider {
@@ -1656,11 +1742,16 @@ a:visited {
         margin: 0;
         width: 100%;
         padding: 0;
-
     }
 
     .testimonials__quote:before {
         left: -35px;
+    }
+
+    /* ------------------------------------------------- */
+    .companies__grid {
+        margin: 0 15px;
+        grid-template: repeat(6, auto) / repeat(2, 1fr);
     }
 }
 
@@ -1706,8 +1797,6 @@ a:visited {
     }
 
     /* ------------------------------------------------- */
-
-
 
 
 }
