@@ -1387,6 +1387,252 @@ a:visited {
 }
 
 /* ================================================================ */
+/* ====================== INFO (CONTACTS) ========================= */
+
+.info__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.info__content {
+    margin-right: var(--content-margin-right);
+}
+
+.info__heading {
+    margin-bottom: 40px;
+}
+
+.info__contacts {
+    margin-bottom: 50px;
+}
+
+.info__contacts-item {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.info__contacts-item:last-child {
+    margin-bottom: 0;
+}
+
+.info__contactIconSvg {
+    width: 17px;
+    height: 17px;
+    border: none;
+    margin: 3px 5px 0 0;
+}
+
+.info__item-top {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-directions-text-grey);
+}
+
+.info__link {
+    color: var(--color-black-sp);
+    transition: all 1.5s;
+}
+
+.info__link:hover {
+    color: var(--color-red-main-dark);
+    transition: all 0.75s;
+}
+
+.info__item-address {
+    color: var(--color-black-sp);
+}
+
+.info__item-address span {
+    white-space: nowrap;
+}
+
+.info__follow-head {
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.info__socials {
+    display: flex;
+}
+
+.info__socials-item {
+    margin-right: 20px;
+}
+
+.info__socials-item:last-child {
+    margin-right: 0;
+}
+
+.info__socials-link img {
+    width: 20px;
+    height: 20px;
+    border: none;
+    transition: all 1.5s;
+}
+
+.info__socials-link img:hover {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(50%) contrast(100%);
+    scale: 1.1;
+    transition: all 0.5s;
+}
+
+.info__map {
+    width: 100%;
+    max-width: 705px;
+    height: 412px;
+    min-width: 280px;
+    min-height: 305px;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.25),
+        0px 30px 24px -10px rgba(154, 156, 165, 0.2),
+        0px 12px 18px -6px rgba(154, 156, 165, 0.15),
+        0px 4px 4px -4px rgba(30, 33, 44, 0.1);
+    border-radius: 4px;
+}
+
+.info__map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* ================================================================ */
+/* ========================= QUESTIONS ============================ */
+.questions__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.questions__img img {
+    max-width: 400px;
+    height: 100%;
+    transform: scaleX(-1);
+}
+
+.questions__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--content-margin-right);
+}
+
+.questions__heading {
+    margin-bottom: 40px;
+}
+
+.questions__form-row {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.questions__form-label {
+    display: block;
+    padding: 12px 0;
+    margin-right: 40px;
+    width: 100%;
+}
+
+.questions__form-label:last-child {
+    margin-right: 0px;
+}
+
+.questions__form-input,
+.questions__form-text {
+    display: block;
+    border: 1px solid var(--color-gray-btn);
+    border-radius: 4px;
+    padding: 13px 16px;
+    margin-top: 8px;
+    width: calc(100% - 34px);
+}
+
+.questions__form-text {
+    resize: none;
+    height: 128px;
+    font-family: Arial, sans-serif;
+    font-size: 13.3333px
+}
+
+.questions__form-input::placeholder,
+.questions__form-text::placeholder {
+    color: var(--color-placeholder);
+}
+
+.questions__text-label {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.questions__checkbox-label {
+    display: flex;
+    margin-right: 50px;
+    width: 100%;
+}
+
+.questions__form-checkbox {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    margin: 0 12px 0 0;
+}
+
+.questions__form-default {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.questions__form-custom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--color-grey);
+    border-radius: 3px;
+    transition: all 1.5s;
+    padding: 2px;
+}
+
+.questions__form-custom:hover {
+    cursor: pointer;
+    border: 1px solid var(--color-red-main);
+    transition: all 0.75s;
+}
+
+.questions__form-default:checked+.questions__form-custom {
+    background: url("../icons/check-svgrepo-com.svg") 50% 50% no-repeat, var(--color-red-main);
+}
+
+.questions__form-custom img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    border: none;
+    padding: 0 1px 1px 0;
+}
+
+.questions__form-btn {
+    width: 100%;
+    flex-grow: 1;
+    align-self: center;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================================================================ */
 /* =========================== MEDIA ============================== */
 /* =========================== 1200 =============================== */
 @media (max-width: 1200px) {
@@ -1614,7 +1860,7 @@ a:visited {
 
     /* ---------------------------------------------------- */
     .blog__item-info {
-        font-size: 12px;
+        font-size: 12.5px;
     }
 
     .blog__info-el img {
@@ -1785,11 +2031,45 @@ a:visited {
     .blog__item {
         flex-basis: calc(100% / 2.1);
     }
+
+    .blog__item-info {
+        font-size: 14px;
+    }
+
+    .blog__info-el img {
+        top: 8px;
+    }
 }
 
 @media (max-width: 900px) and (min-height: 500px) {
     .header {
         max-height: 550px;
+    }
+}
+
+
+/* ============================ 750 ===============================*/
+
+@media (max-width: 750px) {
+    .info__inner {
+        flex-direction: column;
+    }
+
+    .info__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        /* padding: 0 15px; */
+    }
+
+    .info__content .heading {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .info__map {
+        margin-top: 30px;
     }
 }
 
@@ -2080,7 +2360,23 @@ a:visited {
     .program__acc {
         margin: 0 15px;
     }
+
+    /* ------------------------------------------------- */
+
+    .info__map iframe {
+        border-radius: 0;
+        border: none !important;
+    }
+
+    .info__content {
+        padding: 0 15px;
+    }
+
+    .info__socials-item {
+        margin-right: 15px;
+    }
 }
+
 
 /* ============================ 400 ===============================*/
 
@@ -2149,4 +2445,4 @@ a:visited {
     }
 }
 
-/* 18:46:29 */
+/* 19:38:02 */
