@@ -1509,8 +1509,10 @@ a:visited {
 
 .questions__img img {
     max-width: 400px;
-    height: 100%;
+    width: 100%;
+    max-height: 100%;
     transform: scaleX(-1);
+    object-fit: cover;
 }
 
 .questions__content {
@@ -1691,6 +1693,8 @@ a:visited {
     .blog__item-info {
         font-size: 0.95em;
     }
+
+    /* ---------------------------------------------------- */
 }
 
 
@@ -2039,6 +2043,16 @@ a:visited {
     .blog__info-el img {
         top: 8px;
     }
+
+    /* ---------------------------------------------------- */
+    .questions__content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .questions__img {
+        display: none;
+    }
 }
 
 @media (max-width: 900px) and (min-height: 500px) {
@@ -2060,7 +2074,6 @@ a:visited {
         display: flex;
         flex-direction: column;
         align-self: flex-start;
-        /* padding: 0 15px; */
     }
 
     .info__content .heading {
@@ -2242,6 +2255,31 @@ a:visited {
         flex-direction: column;
         align-self: center;
     }
+
+    /* ---------------------------------------------------- */
+    .questions__form-row {
+        flex-direction: column;
+    }
+
+    .questions__form-row:first-child {
+        margin-bottom: 0px;
+    }
+
+    .questions__form-label {
+        margin-right: 0;
+    }
+
+    .questions__form-btn {
+        max-width: 220px;
+        margin-top: 25px;
+    }
+
+    /* ---------------------------------------------------- */
+    .questions__checkbox-label {
+        max-width: 320px;
+        background-color: #03CEA4;
+    }
+
 }
 
 /* ============================ 450 ===============================*/
@@ -2375,6 +2413,12 @@ a:visited {
     .info__socials-item {
         margin-right: 15px;
     }
+
+    /* ------------------------------------------------- */
+    .questions__form {
+        margin-left: var(--gap450);
+        width: 96%;
+    }
 }
 
 
@@ -2423,6 +2467,9 @@ a:visited {
     .blog__item {
         max-width: 320px;
     }
+
+    /* ------------------------------------------------- */
+
 }
 
 @media (max-width: 400px) and (max-height: 500px) {
