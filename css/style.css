@@ -1635,6 +1635,224 @@ a:visited {
 }
 
 /* ================================================================ */
+/* ========================== FOOTER ============================== */
+.footer {
+    color: white;
+}
+
+.footer__top {
+    background-color: var(--color-black-sp);
+    padding: 80px 60px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__top-col {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 0 15px;
+}
+
+.footer__top-col:first-child {
+    max-width: 286px;
+    margin-left: 0;
+}
+
+.footer__top-col:last-child {
+    max-width: 286px;
+    margin-right: 0;
+}
+
+.footer__top-col:last-child .footer__top-title {
+    white-space: normal;
+}
+
+.footer__logo {
+    display: block;
+    color: var(--color-grey);
+}
+
+.footer__logo img {
+    border: none;
+    transition: all 2s;
+    margin-bottom: 25px;
+}
+
+.footer__logo img:hover {
+    scale: 1.05;
+    transition: all 0.5s;
+}
+
+.footer__top-text {
+    font-size: 12px;
+    line-height: 150%;
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
+
+.footer__socials {
+    display: flex;
+}
+
+.footer__socials-item {
+    margin-right: 20px;
+}
+
+.footer__socials-item:last-child {
+    margin-right: 0;
+}
+
+.footer__socials-link img {
+    width: 20px;
+    height: 20px;
+    border: none;
+    transition: all 1.5s;
+}
+
+.footer__socials-link img:hover {
+    width: 20px;
+    height: 20px;
+    border: none;
+    filter: invert(1) brightness(2);
+    scale: 1.1;
+    transition: all 0.5s;
+}
+
+.footer__top-title {
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    white-space: nowrap;
+}
+
+.footer__top-item {
+    margin-bottom: 10px;
+}
+
+.footer__top-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__item-link {
+    display: flex;
+    align-items: center;
+    color: white !important;
+    opacity: 0.6;
+    transition: all 1.5s;
+    white-space: nowrap;
+}
+
+.footer__item-link:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.footer__item-link img {
+    width: 15px;
+    height: 15px;
+    border: none;
+    margin-right: 10px;
+}
+
+.footer__form {
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.footer__form-input {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    border-radius: 4px;
+    padding: 9px 12px;
+    padding-right: 30px;
+    font-size: 12px;
+    list-style: 150%;
+    color: white;
+    width: calc(100% - 45px);
+    margin-bottom: 12px;
+}
+
+.footer__form-input::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+.footer__form-btn {
+    position: absolute;
+    top: 29%;
+    right: 0;
+    transform: translateY(-29%);
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.footer__form-btn:hover {
+    cursor: pointer;
+    opacity: 1;
+    scale: 1.1;
+    top: 30%;
+}
+
+.footer__form-btn img {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.footer__bottom {
+    background-color: var(--bg-color-footer-bottom)
+}
+
+.footer__form-desc {
+    font-size: 10px;
+    line-height: 150%;
+}
+
+.footer__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.footer__copy img {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: none;
+    margin: 0 3px -3px;
+}
+
+.footer__go-top {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    opacity: 0.6;
+    text-transform: uppercase;
+    transition: all 1.5s;
+}
+
+.footer__go-top:hover {
+    color: white;
+    opacity: 1;
+    transition: all .75s;
+}
+
+/* ================================================================ */
 /* =========================== MEDIA ============================== */
 /* =========================== 1200 =============================== */
 @media (max-width: 1200px) {
@@ -2267,6 +2485,14 @@ a:visited {
 
     .questions__form-label {
         margin-right: 0;
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .questions__form-input,
+    .questions__form-text {
+        padding: 7px 8px;
+        margin-top: 3px;
     }
 
     .questions__form-btn {
@@ -2277,7 +2503,6 @@ a:visited {
     /* ---------------------------------------------------- */
     .questions__checkbox-label {
         max-width: 320px;
-        background-color: #03CEA4;
     }
 
 }
@@ -2461,6 +2686,10 @@ a:visited {
 
     .team__slider-arrows {
         display: none;
+    }
+
+    .team__slider .slick-dots button {
+        margin: 25px 8px;
     }
 
     /* ------------------------------------------------- */
