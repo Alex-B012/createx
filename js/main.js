@@ -99,14 +99,27 @@ $(document).ready(function () {
     $(".burger__wrapper").toggleClass("burger--open");
   });
 
+  $(".header__top a").on("click", function (e) {
+    e.preventDefault();
+    $(".header__top").removeClass("header__top--open");
+    $(".burger__wrapper").removeClass("burger--open");
+  });
+
   setInterval(() => {
     if (
       $(window).width() > 1100 ||
       $(".header__top").hasClass("header__top--open") === false
     ) {
       $(".overlay").removeClass("overlay--show");
+      $(".header__top").removeClass("header__top--open");
+      $(".burger__wrapper").removeClass("burger--open");
     } else {
       $(".overlay").addClass("overlay--show");
     }
+
+    console.log(
+      $(window).width(),
+      $(".header__top").hasClass("header__top--open")
+    );
   }, 150);
 });
