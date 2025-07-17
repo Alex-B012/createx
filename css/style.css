@@ -1841,9 +1841,11 @@ a:visited {
     font-weight: 700;
     font-size: 14px;
     line-height: 150%;
-    opacity: 0.6;
+    color: white;
+    opacity: 0.3;
     text-transform: uppercase;
     transition: all 1.5s;
+
 }
 
 .footer__go-top:hover {
@@ -2539,6 +2541,34 @@ a:visited {
         max-width: 320px;
     }
 
+    .footer__bottom-inner {
+        flex-direction: column-reverse;
+        padding: 0 10px 10px;
+    }
+
+    .footer__go-top {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .footer__copy {
+        max-width: 245px;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .footer__copy span {
+        max-width: 245px;
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+    }
+
+    .footer__copy span:last-child {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5px;
+    }
 }
 
 /* ============================ 450 ===============================*/
@@ -2736,12 +2766,9 @@ a:visited {
         padding: 30px 5px;
     }
 
-    .footer__top-col:first-child {
-        padding: 15px;
-    }
-
-    .footer__top-col:last-child {
-        padding-right: 15px;
+    .footer__top-col {
+        padding: 9px;
+        padding-right: 0;
     }
 }
 

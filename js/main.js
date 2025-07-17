@@ -93,7 +93,7 @@ $(document).ready(function () {
     }
   }, 150);
 
-  $(".burger, .overlay").on("click", function (e) {
+  $(".burger, .overlay, .header__top a").on("click", function (e) {
     e.preventDefault();
     $(".header__top").toggleClass("header__top--open");
     $(".burger__wrapper").toggleClass("burger--open");
@@ -110,5 +110,3 @@ $(document).ready(function () {
     }
   }, 150);
 });
-
-// 18:46:29
