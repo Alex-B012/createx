@@ -2795,7 +2795,7 @@ a:visited {
     }
 
     .header__nav-link {
-        padding: 4px;
+        padding: 2px;
     }
 
     .header__btn-box {
@@ -2805,7 +2805,7 @@ a:visited {
     }
 
     .header__user-nav {
-        margin: 5px;
+        margin: 10px 10px 15px;
         padding: 0 25px;
     }
 
@@ -2815,6 +2815,7 @@ a:visited {
 
     .header__title {
         font-size: 34px;
+        margin-bottom: 40px;
     }
 
     .heading {
