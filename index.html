@@ -4,56 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon" id="favicon-ico" /> -->
-
-    <!-- <link
-      rel="icon"
-      href="./fav/cx_12x12.svg"
-      type="image/svg+xml"
-      id="favicon-svg"
-    /> -->
-
-    <!-- <link rel="icon" href="/fav/favicon.ico" sizes="any" /> -->
-
-    <!-- <link
+    <link
       rel="icon"
       type="image/png"
       href="/fav/cx_16x16.png"
       sizes="16x16"
       id="favicon-png_16"
-    /> -->
-    <!-- <link
+    />
+    <link
       rel="icon"
       type="image/png"
       href="/fav/cx_32x32.png"
       sizes="32x32"
       id="favicon-png_32"
-    /> -->
-    <!-- <link
+    />
+    <link
       rel="icon"
       type="image/png"
       href="/fav/cx_48x48.png"
       sizes="48x48"
       id="favicon-png_48"
-    /> -->
-
-    <!-- <link
+    />
+    <link
       rel="icon"
       type="image/png"
-      href="/fav/favicon-192x192.png"
+      href="/fav/cx_192x192.png"
       sizes="192x192"
-    /> -->
-
-    <!-- (Опционально) Для iOS устройств -->
+      id="favicon-png_192"
+    />
+    <link
+      rel="icon"
+      href="./fav/cx_12x12.svg"
+      type="image/svg+xml"
+      id="favicon-svg"
+    />
+    <link rel="icon" href="/fav/favicon.ico" sizes="any" id="favicon-ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="/fav/apple-touch-icon.png"
     />
-
-    <!-- (Опционально) Для Windows Pinning в меню "Пуск" -->
-    <!-- <meta name="msapplication-TileImage" content="/fav/ms-icon-144x144.png" />
-    <meta name="msapplication-TileColor" content="#ffffff" /> -->
+    <meta name="msapplication-TileImage" content="/fav/ms-icon-144x144.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
 
     <link
       rel="stylesheet"
@@ -2417,35 +2409,33 @@
     </script>
 
     <script>
+      function checkIOS() {
+        if (window.navigator.standalone) {
+          return true;
+        }
+        if (window.matchMedia("(display-mode: standalone)").matches) {
+          return true;
+        }
+
+        return false;
+      }
+
+      // is Windows (PWA mode)
+      function checkWindows() {
+        const isWindows = navigator.platform.indexOf("Win") !== -1;
+        const isStandalone = window.matchMedia(
+          "(display-mode: standalone)"
+        ).matches;
+
+        return isWindows && isStandalone;
+      }
+
       function setFavicon() {
-        function isAppOnHomeScreen() {
-          // Проверка для iOS
-          if (window.navigator.standalone) {
-            return true; // Сайт добавлен на домашний экран
-          }
-          // Также можно проверять, не видна ли панель адреса
-          if (window.matchMedia("(display-mode: standalone)").matches) {
-            return true;
-          }
-
-          return false;
-        }
-
-        // Функция для проверки, запущен ли сайт в Windows и режиме PWA
-        function isPinnedToStart() {
-          const isWindows = navigator.platform.indexOf("Win") !== -1;
-          const isStandalone = window.matchMedia(
-            "(display-mode: standalone)"
-          ).matches;
-
-          return isWindows && isStandalone;
-        }
-
         const darkTheme =
           window.matchMedia &&
           window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-        if (isAppOnHomeScreen()) {
+        if (checkIOS()) {
           const iconLink = document.querySelector(
             'link[rel="apple-touch-icon"]'
           );
@@ -2455,36 +2445,33 @@
           } else {
             iconLink.setAttribute("href", "/fav/apple-touch-icon.png");
           }
-        } else if (isPinnedToStart()) {
+        } else if (checkWindows()) {
           if (darkTheme) {
-            tileImage.setAttribute(
-              "content",
-              "/assets/ms-icon-144x144-dark.png"
-            );
+            tileImage.setAttribute("content", "/fav/ms-icon-144x144_dark.png");
             tileColor.setAttribute("content", "#000000");
           } else {
-            tileImage.setAttribute(
-              "content",
-              "/assets/ms-icon-144x144-light.png"
-            );
+            tileImage.setAttribute("content", "/fav/ms-icon-144x144.png");
             tileColor.setAttribute("content", "#ffffff");
           }
         } else {
-          // document.getElementById("favicon-svg").href = darkTheme
-          //   ? "./fav/cx_12x12_dark.svg"
-          //   : "./fav/cx_12x12.svg";
-          // document.getElementById("favicon-ico").href = darkTheme
-          //   ? "/fav/favicon-dark.ico"
-          //   : "/fav/favicon.ico";
-          // document.getElementById("favicon-png_16").href = darkTheme
-          //   ? "/fav/cx_16x16_dark.png"
-          //   : "/fav/cx_16x16.png";
-          // document.getElementById("favicon-png_32").href = darkTheme
-          //   ? "/fav/cx_32x32_dark.png"
-          //   : "/fav/cx_32x32.png";
-          // document.getElementById("favicon-png_48").href = darkTheme
-          //   ? "/fav/cx_48x48_dark.png"
-          //   : "/fav/cx_48x48.png";
+          document.getElementById("favicon-svg").href = darkTheme
+            ? "./fav/cx_12x12_dark.svg"
+            : "./fav/cx_12x12.svg";
+          document.getElementById("favicon-ico").href = darkTheme
+            ? "/fav/favicon_dark.ico"
+            : "/fav/favicon.ico";
+          document.getElementById("favicon-png_16").href = darkTheme
+            ? "/fav/cx_16x16_dark.png"
+            : "/fav/cx_16x16.png";
+          document.getElementById("favicon-png_32").href = darkTheme
+            ? "/fav/cx_32x32_dark.png"
+            : "/fav/cx_32x32.png";
+          document.getElementById("favicon-png_48").href = darkTheme
+            ? "/fav/cx_48x48_dark.png"
+            : "/fav/cx_48x48.png";
+          document.getElementById("favicon-png_192").href = darkTheme
+            ? "/fav/cx_192x192_dark.png"
+            : "/fav/cx_192x192.png";
         }
       }
       window.addEventListener("load", setFavicon);
