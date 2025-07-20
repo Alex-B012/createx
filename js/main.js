@@ -116,12 +116,5 @@ $(document).ready(function () {
     } else {
       $(".overlay").addClass("overlay--show");
     }
-
-    console.log(
-      $(window).width(),
-      $(".header__top").hasClass("header__top--open")
-    );
   }, 150);
 });
-
-// 20:08:50
